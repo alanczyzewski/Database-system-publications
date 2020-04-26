@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        body{
+            background-color: lightgrey;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .header{
+            font-size: xx-large;
+            color: brown;
+        }
+        .header2{
+            font-size: x-large;
+        }
+        .textBoxOnlyRead{
+            background-color: lightblue;
+            width: 1200px;
+        }
+        .textBoxInput{
+            background-color: lightcyan;
+        }
+        .listBox{
+            background-color: lightblue;
+            cursor: pointer;
+        }
+        .dropDownList{
+            background-color: lightsteelblue;
+            cursor: pointer;
+        }
+        .button{
+            background-color: indianred;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .button:hover{
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            height: 70px;
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            min-width: 120px;
+            font-size: large;
+            height: 200px;
+            color: lightslategrey;
+            text-align: center;
+            padding: 25px 20px;
+            text-decoration: none;
+            border-right: 2px dotted #808080;
+            opacity: 0.9;
+        }
+        li a:hover {
+            background-color: darkblue;
+            color: mediumpurple;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+    <div>
+        <ul>
+            <li><a class="active" href="Default.aspx">Publikacje</a></li>
+            <li><a href="Authors.aspx">Autorzy</a></li>
+            <li><a href="Search.aspx">Szukaj</a></li>
+            <li><a href="AddPublication.aspx">Dodaj publikację</a></li>
+        </ul>
+        <br />
+    </div>
+    <hr />
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
